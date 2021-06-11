@@ -1,5 +1,4 @@
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,7 +20,7 @@ public class UndecoratedFrame {
 
     public static void main(String[] args) {
         final JFrame frame = new JFrame();
-        //  Graphics g = new Graphics();
+        //Graphics g = new Graphics();
 
         // Disables or enables decorations for this frame. By setting undecorated
         // to true will remove the frame's title bar including the maximize,
@@ -58,9 +57,6 @@ public class UndecoratedFrame {
         frame.getContentPane().add(button, BorderLayout.NORTH);
         frame.getContentPane().add(new JLabel("Drag Me", JLabel.CENTER), 
             BorderLayout.CENTER);
-        
-        ImageIcon image = new ImageIcon("/kirbyProj/img/kirby01.png");
-        
         frame.setVisible(true);
     }
 }
