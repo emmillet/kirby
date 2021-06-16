@@ -32,21 +32,6 @@ public class UndecoratedFrame {
         JButton button = new JButton("Close Me");
         button.addActionListener(e -> System.exit(0));
 
-        // The mouse listener and mouse motion listener we add here is to simply
-        // make our frame draggable.
-        frame.addMouseListener(new MouseAdapter() {
-            public void mousePressed(MouseEvent e) {
-                point.x = e.getX();
-                point.y = e.getY();
-            }
-        });
-
-        frame.addMouseMotionListener(new MouseMotionAdapter() {
-            public void mouseDragged(MouseEvent e) {
-                Point p = frame.getLocation();
-                frame.setLocation(p.x + e.getX() - point.x, p.y + e.getY() - point.y);
-            }
-        });
 
         frame.setSize(300, 300);
         frame.setLocation(200, 200);
